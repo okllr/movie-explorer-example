@@ -424,7 +424,7 @@ module.exports = function (grunt) {
       fonts: {
         expand: true,
         flatten: true,
-        src: "bower_components/components-font-awesome/fonts/*",
+        src: 'bower_components/components-font-awesome/fonts/*',
         dest: 'dist/fonts'
       }
     },
