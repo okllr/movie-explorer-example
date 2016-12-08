@@ -20,26 +20,16 @@ angular.module('movieExplorerApp')
     {
       ctrl.movies = result;
 
-	    movies.getConfiguration().then(function(result){
-	    	ctrl.configuration = result;
-	    }).then(function(){
-	    	angular.forEach(ctrl.movies, function(movie){
-	    		if(movie.backdrop_path){
-	      			ctrl.slides.push(ctrl.getImageURL(movie.backdrop_path,'w780'));
-	      		}
-	      	});
-	      	ctrl.currentSlide = 0;
-	    });
-	});
 
-    ctrl.getImageURL = function(image, size){
-      if(ctrl.configuration)
-      {
-        return ctrl.configuration.images.secure_base_url + size + image;
-      }else{
-        return null;
-      }
-    };
+	  angular.forEach(ctrl.movies, function(movie){
+	    if(movie.backdrop_path){
+	    	movies.getImageURL(movie.backdrop_path,'w780').then(function(imageUrl){
+	    		ctrl.slides.push(imageUrl) ;
+	    	});	      	
+	    }
+	   });
+	   ctrl.currentSlide = 0;  
+	});
 
     ctrl.getNextSlideIndex = function(){
       if(ctrl.currentSlide <= ctrl.slides.length - 1)
