@@ -32,7 +32,7 @@ angular.module('movieExplorerApp')
 	});
 
     ctrl.getNextSlideIndex = function(){
-      if(ctrl.currentSlide <= ctrl.slides.length - 1)
+      if(ctrl.currentSlide >= ctrl.slides.length - 1)
       {
         return 0;
       }else{
