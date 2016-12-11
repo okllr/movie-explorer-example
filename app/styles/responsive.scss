@@ -4,11 +4,41 @@
     .hidden-xs {
         display: none !important;
     }
+
+        .main {
+        .content {
+            .slideshow {
+                height: 225px;
+            }
+
+            .movie-list {
+                .movie-item {
+                    flex: 29%;
+                    background: yellow;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $sizeXS + 1) and (max-width: $sizeSM){
     .hidden-sm {
         display: none !important;
+    }
+
+    .main {
+        .content {
+            .slideshow {
+                height: 350px;
+            }
+
+            .movie-list {
+                .movie-item {
+                    flex: 29%;
+                    background: red;
+                }
+            }
+        }
     }
 }
 
@@ -16,16 +46,46 @@
     .hidden-md {
         display: none !important;
     }
+
+    .main {
+        .content {
+            .movie-list {
+                .movie-item {
+                    flex: 29%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $sizeMD + 1) and (max-width: $sizeLG){
     .hidden-lg {
         display: none !important;
     }
+
+    .main {
+        .content {
+            .movie-list {
+                .movie-item {
+                    flex: 29%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: $sizeLG + 1){
     .hidden-xl {
         display: none !important;
+    }
+
+    .main {
+        .content {
+            .movie-list {
+                .movie-item {
+                    flex: 21%;
+                }
+            }
+        }
     }
 } 

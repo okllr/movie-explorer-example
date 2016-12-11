@@ -13,7 +13,7 @@ Ce fichier modifié/complété pour construire n'importe quelle structure html/c
  
 <div class="movie-list">
   <div class="movie-item" ng-repeat="movie in main.movies track by movie.id">
-    <a ng-href="#/movie/{{movie.id}}"><div ng-bind="movie.title"></div></a>
-    <div ng-bind="movie.overview"></div>
+    <a ng-href="#/movie/{{movie.id}}"><h2 ng-bind="movie.title"></h2></a>
+    <div ng-bind="movie.overview | limitTo:140 "></div>
   </div>
 </div>
